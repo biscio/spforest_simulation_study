@@ -1,10 +1,9 @@
 # Simulation Study
 
 
-The scripts in this repository allows to reproduce the figures and table
-of the paper REF.
-
-Before running them, you will need the following R packages.
+The scripts in this repository allow to reproduce the figures and table
+of the paper REF. You may run the code below to install the necessary
+dependencies.
 
 ``` r
 if (!requireNamespace("pak")) {install.packages("pak")}
@@ -17,7 +16,7 @@ if (!requireNamespace("pracma")) {pak::pkg_install("pracma")}
 if (!requireNamespace("spforest")) {pak::pkg_install("biscio/spforest")}
 ```
 
-To run the script `Table1.R` the R deprecated package `RandomFields` is
+To run the script `Table1.R`, the R deprecated package `RandomFields` is
 necessary. The user may install the last version from CRAN archive
 repository:
 <https://cran.r-project.org/src/contrib/Archive/RandomFields>.
