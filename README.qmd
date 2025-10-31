@@ -16,13 +16,15 @@ if (!requireNamespace("tidyverse")) {pak::pkg_install("tidyverse")}
 if (!requireNamespace("patchwork")) {pak::pkg_install("patchwork")}
 if (!requireNamespace("pracma")) {pak::pkg_install("pracma")}
 if (!requireNamespace("spforest")) {pak::pkg_install("biscio/spforest")}
+if (packageVersion("spforest")<"0.0.0.927") {pak::pkg_install("biscio/spforest",upgrade = TRUE)
+}
 ```
 
 To run the script `Table1.R`, the R deprecated package `RandomFields` is necessary. 
 The user may install the last version from CRAN archive repository: 
 <https://cran.r-project.org/src/contrib/Archive/RandomFields>.
 
-Finally, utility functions are loaded with the following code line.
+Utility functions coded in the file `00_prelim.R` that should be placed in your working directory. Alternatively, download this full repository and open the `.Rproj` in Rstudio Then run the following chunk.
 ```{r}
 #| message: false
 source(file = "00_prelim.R")
