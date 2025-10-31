@@ -8,7 +8,7 @@ message("The computations should take approximately 30 minutes. To reduce the ti
 forestsmooth <- spforest(
   X = bei,
   listcovariates = bcismooth,
-  Ntree = 1,
+  Ntree = 500,
   minpts = 10,
   mtry = 15
 )
