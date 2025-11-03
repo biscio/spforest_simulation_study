@@ -15,7 +15,6 @@ argmtry <- seq(1, 15, by = 1)
 argminpts <- c(seq(160, 20, by = -10))
 
 ## Generate the point patterns
-load(file = "bcismooth.RData")
 beismooth01 <- lapply(bcismooth,
   FUN = function(x) {
     (x - min(x)) / (max(x) - min(x))
@@ -176,13 +175,13 @@ plot(as.im(Estimforest),
 
 ## Figure 4 bottom left ----
 # pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
-Lambdatess <- spforest(X[[3]],
+gammatess <- spforest(X[[3]],
   Ntree = 300,
-  lambda = 100,
+  gamma = 100,
   dimyx = c(101, 201),
   cores = 1
 )
-plot(Lambdatess,
+plot(gammatess,
   main = "",
   col = colbase,
   ribbon = TRUE,
