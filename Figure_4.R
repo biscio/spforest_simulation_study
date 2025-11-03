@@ -37,7 +37,7 @@ plot(ztrue,
 ## Figure 4 top right ----
 # pdf(file = "Figure4_topright.pdf",  width = 10,  height = 5,  pointsize = 8)
 Estimforest <- spforest(
-  X = X[[2]],
+  X = X[[3]],
   listcovariates = bcismooth,
   mtry = 7,
   minpts = 70,
