@@ -30,26 +30,14 @@ forestforvip <- lapply(X, FUN = function(i) {
   )
 })
 
-
 avvip <- NULL
 for (j in 1:length(X)) {
-  vipval <- mclapply(
-    X = seq_along(forestforvip[[j]]$listcov),
-    FUN = function(i) {
-      mean(importance(forestforvip[[j]],
-        id_cov = i
-      ))
-    },
-    mc.cores = 1
-  )
-
-  avvip[[j]] <- unlist(vipval)
+  avvip[[j]] <- vip(forestforvip[[j]])
   print(j)
 }
 
-boxvip <- t(abs(do.call(cbind, avvip))) |>
+boxvip <- do.call(rbind, avvip) |>
   as_tibble()
-colnames(boxvip) <- names(bcismooth)
 
 ggboxvip <- pivot_longer(
   data = boxvip,
