@@ -58,7 +58,6 @@ plot(as.im(Estimforest),
 # pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
 gammatess <- spforest(X[[3]],
   Ntree = 300,
-  gamma = 100,
   dimyx = c(101, 201),
   cores = 1
 )
