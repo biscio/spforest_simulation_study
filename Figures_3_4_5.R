@@ -128,7 +128,7 @@ p2 <- ggplot(
 
 library(patchwork)
 p1 + p2 + plot_layout(guides = "collect")
-ggsave("Figure3.png")
+# ggsave("Figure3.png")
 
 # Figure 4 ----
 
@@ -139,7 +139,7 @@ colbase <- colourmap(getSpatstatVariable("DefaultImageColours")[1:256],
 par(mar = c(0, 0, 0.3, 1))
 
 ## Figure 4 top left ----
-pdf(file = "Figure4_topleft.pdf",  width = 10,  height = 5,  pointsize = 8)
+# pdf(file = "Figure4_topleft.pdf",  width = 10,  height = 5,  pointsize = 8)
 plot(ztrue,
   main = "",
   col = colbase,
@@ -148,10 +148,10 @@ plot(ztrue,
   workaround = FALSE,
   ribargs = list(cex.axis = 1.5)
 )
-dev.off()
+# dev.off()
 
 ## Figure 4 top right ----
-pdf(file = "Figure4_topright.pdf",  width = 10,  height = 5,  pointsize = 8)
+# pdf(file = "Figure4_topright.pdf",  width = 10,  height = 5,  pointsize = 8)
 Estimforest <- spforest(
   X = X[[2]],
   listcovariates = bcismooth,
@@ -172,10 +172,10 @@ plot(as.im(Estimforest),
   workaround = FALSE,
   ribargs = list(cex.axis = 1.5)
 )
-dev.off()
+# dev.off()
 
 ## Figure 4 bottom left ----
-pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
+# pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
 Lambdatess <- spforest(X[[3]],
   Ntree = 300,
   lambda = 100,
@@ -190,10 +190,10 @@ plot(Lambdatess,
   workaround = FALSE,
   ribargs = list(cex.axis = 1.5)
 )
-dev.off()
+# dev.off()
 
 ## Figure 4 bottom right ----
-pdf(file = "Figure4_bottomright.pdf",  width = 10,  height = 5,  pointsize = 8)
+# pdf(file = "Figure4_bottomright.pdf",  width = 10,  height = 5,  pointsize = 8)
 plot(predict(ppm(X[[3]], ~., data = bcismooth)),
   main = "",
   col = colbase,
@@ -202,7 +202,7 @@ plot(predict(ppm(X[[3]], ~., data = bcismooth)),
   workaround = FALSE,
   ribargs = list(cex.axis = 1.5)
 )
-dev.off()
+# dev.off()
 
 
 # Figure 5 -----
@@ -273,4 +273,4 @@ ggplot(ggboxvip, aes(x = Covariable, y = VIP)) +
     )
   ) +
   xlab("")
-ggsave("Figure5.png")
+# ggsave("Figure5.png")

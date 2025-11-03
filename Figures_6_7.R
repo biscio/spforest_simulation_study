@@ -29,10 +29,10 @@ plot(log(as.im(forestsmooth)),
   workaround = FALSE,
   ribargs = list(cex.axis = 1)
 )
-dev.print(pdf,
-  "Figure6.pdf",
-  width = 9, height = 5
-)
+# dev.print(pdf,
+#   "Figure6.pdf",
+#   width = 9, height = 5
+# )
 
 # Figure 7 ----
 
@@ -53,9 +53,9 @@ ggplot(df, aes(x = reorder(covariates, -VIP), VIP)) +
     panel.grid.major = element_blank(),
     panel.grid.minor = element_blank()
   )
-ggsave(
-  width = 7,
-  height = 2,
-  dpi = 300,
-  filename = "Figure7.eps"
-)
+# ggsave(
+#   width = 7,
+#   height = 2,
+#   dpi = 300,
+#   filename = "Figure7.eps"
+# )
