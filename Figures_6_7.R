@@ -1,14 +1,16 @@
 source(file = "00_prelim.R")
 
 # No parallelism is used ----
-message("The computations should take approximately 30 minutes. To reduce the time, you may change the argument Ntree from 500 to 100, which still shows good result.")
+message("The computations should take approximately 30 minutes. To reduce time, you may change the argument Ntree from 500 to 100, which still shows good results.")
+
+Ntree <- 500
 
 # Figure 6 ----
 
 forestsmooth <- spforest(
   X = bei,
   listcovariates = bcismooth,
-  Ntree = 500,
+  Ntree = Ntree,
   minpts = 10,
   mtry = 15
 )

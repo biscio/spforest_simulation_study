@@ -1,5 +1,5 @@
 rm(list=ls())
-library(spforest)
+source('00_prelim.R')
 
 # Getting the date from spatstat.data ----
 win_concrete <- Window(concrete)

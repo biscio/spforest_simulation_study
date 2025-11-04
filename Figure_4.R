@@ -1,6 +1,7 @@
 source(file = "00_prelim.R")
 
 # Generate the point patterns ----
+Nsim <- 100
 beismooth01 <- lapply(bcismooth,
   FUN = function(x) {
     (x - min(x)) / (max(x) - min(x))
@@ -56,12 +57,12 @@ plot(as.im(Estimforest),
 
 ## Figure 4 bottom left ----
 # pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
-gammatess <- spforest(X[[3]],
+lambdatess <- spforest(X[[3]],
   Ntree = 300,
   dimyx = c(101, 201),
   cores = 1
 )
-plot(gammatess,
+plot(lambdatess,
   main = "",
   col = colbase,
   ribbon = TRUE,

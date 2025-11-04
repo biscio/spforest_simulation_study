@@ -1,3 +1,12 @@
+if (!requireNamespace("pak")) {install.packages("pak")}
+if (!requireNamespace("parallel")) {pak::pkg_install("parallel")}
+if (!requireNamespace("rgl")) {pak::pkg_install("rgl")}
+if (!requireNamespace("spatstat")) {pak::pkg_install("spatstat")}
+if (!requireNamespace("tidyverse")) {pak::pkg_install("tidyverse")}
+if (!requireNamespace("patchwork")) {pak::pkg_install("patchwork")}
+if (!requireNamespace("pracma")) {pak::pkg_install("pracma")}
+if (!requireNamespace("spforest")) {pak::pkg_install("biscio/spforest")}
+
 library(spatstat)
 library(tidyverse)
 library(parallel)

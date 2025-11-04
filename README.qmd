@@ -3,30 +3,23 @@
   format: gfm
 ---
   
-The scripts in this repository allow to reproduce the figures and table of the paper REF.
-You may run the code below to install the necessary dependencies. 
+The scripts in this repository reproduce the figures and the table from the paper REF.
 
-```{r}
-#| message: false
-if (!requireNamespace("pak")) {install.packages("pak")}
-if (!requireNamespace("parallel")) {pak::pkg_install("parallel")}
-if (!requireNamespace("rgl")) {pak::pkg_install("rgl")}
-if (!requireNamespace("spatstat")) {pak::pkg_install("spatstat")}
-if (!requireNamespace("tidyverse")) {pak::pkg_install("tidyverse")}
-if (!requireNamespace("patchwork")) {pak::pkg_install("patchwork")}
-if (!requireNamespace("pracma")) {pak::pkg_install("pracma")}
-if (!requireNamespace("spforest")) {pak::pkg_install("biscio/spforest")}
-if (packageVersion("spforest")<"0.0.0.927") {pak::pkg_install("biscio/spforest",upgrade = TRUE)
-}
-```
+For convenience, we recommand downloading the entire repository and opening the `.Rproj` file in Rstudio. Utility functions and dependencies are coded in the file `00_prelim.R`, which is sourced at the beginning of every other script. 
 
-To run the script `Table1.R`, the R deprecated package `RandomFields` is necessary. 
-The user may install the last version from CRAN archive repository: 
-<https://cran.r-project.org/src/contrib/Archive/RandomFields>.
+In detail :
 
-Utility functions coded in the file `00_prelim.R` that should be placed in your working directory. Alternatively, download this full repository and open the `.Rproj` in Rstudio Then run the following chunk.
-```{r}
-#| message: false
-source(file = "00_prelim.R")
-```
+- `Figure_1.R` illustrates the intensity estimation of the `concrete` dataset, based on a single tessellation and on 100 independent tessellations. No covariates are used in this example.
+
+- `Figure_2.R` shows the intensity estimation of the `bei` dataset on the manifold defined by the geographical topography of its obervation domain. Again, no covariates are used.
+
+- `Figure_3.R` reports the out-of-bag (OOB) scores and the MISE scores over a grid of hyperparameters $n_min$ and $mtry$ involved in the random forest intensity estimation of a synthetic dataset.
+
+- `Figure_4.R` presents the intensity estimation results for a synthetic dataset using:  the random forest estimator with covariates, when hyperparameters are selected by OOB cross-validation; the estimator without covariates; and a (misspecified) parametric log-linear model.
+
+- `Figure_5.R` displays the distribution of variable importance (VIP) scores for all covariates, over 100 replications of the random forest intensity estimation of the previous synthetic dataset. 
+
+- `Figure_6_7.R` concerns the application to the 2D `bei` dataset using all available covariates. It shows both the estimated intensity and the VIP scores of all covariates.
+
+- `Table1.R` reproduces the simulation study comparing the random forest approach to  state-of-the-art methods for estimating the intensity of benchmark models. To run this script, the deprecated R package `RandomFields` is required.  The last version can be installed from the CRAN archive repository: <https://cran.r-project.org/src/contrib/Archive/RandomFields>.
 
