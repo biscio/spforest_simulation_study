@@ -5,7 +5,7 @@
   
 The scripts in this repository reproduce the figures and the table from the paper REF.
 
-For convenience, we recommand downloading the entire repository and opening the `.Rproj` file in Rstudio. Utility functions and dependencies are coded in the file `00_prelim.R`, which is sourced at the beginning of every other script. 
+For convenience, we recommend downloading the entire repository and opening the `.Rproj` file in Rstudio. Utility functions and dependencies are coded in the file `00_prelim.R`, which is sourced at the beginning of every other script. 
 
 In detail :
 
