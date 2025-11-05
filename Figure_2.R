@@ -1,6 +1,6 @@
 rm(list = ls())
 source('00_prelim.R')
-message("The computations should take approximately 15 seconds")
+message("The computations should take approximately 15 seconds.")
 library(rgl)
 
 # Figure 2 top left ----
