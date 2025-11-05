@@ -1,5 +1,6 @@
+rm(list=ls())
 source(file = "00_prelim.R")
-
+message("The computations should take approximately 1 hour.")
 Nsim <- 100
 Ntree <- 300
 
@@ -25,8 +26,7 @@ forestforvip <- lapply(X, FUN = function(i) {
     listcovariates = bcismooth,
     mtry = 7,
     minpts = 70,
-    Ntree = Ntree,
-    cores = 1
+    Ntree = Ntree
   )
 })
 
