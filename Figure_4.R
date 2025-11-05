@@ -60,8 +60,7 @@ plot(as.im(Estimforest),
 # pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
 lambdatess <- spforest(X[[3]],
   Ntree = 300,
-  dimyx = c(101, 201),
-  cores = 1
+  dimyx = c(101, 201)
 )
 plot(lambdatess,
   main = "",
