@@ -1,6 +1,6 @@
 rm(list = ls())
-message("The computations should take approximately 5 minutes.")
 source('00_prelim.R')
+message("The computations should take approximately 5 minutes.")
 
 # Getting the date from spatstat.data ----
 win_concrete <- Window(concrete)
