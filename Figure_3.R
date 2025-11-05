@@ -3,7 +3,7 @@ source(file = "00_prelim.R")
 
 # Warning if run on a laptop ----
 if (detectCores() < 25) {
-  stop("We detected less than 25 cores. We strongly recommend to run this script on a server and not a laptop. As of now, parallel computations have been set to use 25 cores.")
+  stop("We detected less than 25 cores. We strongly recommend to run this script on a server and not a laptop. As of now, parallel computations have been set to use 25 cores using parallel::mclapply.")
 }
 
 # Computation for all the combinations of hyperparameters ----

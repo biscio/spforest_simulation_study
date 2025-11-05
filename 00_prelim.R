@@ -63,7 +63,6 @@ ftib <- function(X,
         Ntree = Ntree,
         minpts = minpts,
         threshold = threshold,
-        cores = cores_trees,
         mtry = mtry,
         randmtry = randmtry
       )
@@ -118,8 +117,7 @@ ftib <- function(X,
     OOBconc <- NULL
     for (i in 1:length(output$forest)) {
       OOBconc[[i]] <- OOBscr(
-        forest = output$forest[[i]],
-        cores = 1
+        forest = output$forest[[i]]
       )
     }
     output <- mutate(output,
