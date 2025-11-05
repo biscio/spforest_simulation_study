@@ -43,8 +43,7 @@ Estimforest <- spforest(
   listcovariates = bcismooth,
   mtry = 7,
   minpts = 70,
-  Ntree = 500,
-  cores = 1
+  Ntree = 500
 )
 plot(as.im(Estimforest),
   main = "",
