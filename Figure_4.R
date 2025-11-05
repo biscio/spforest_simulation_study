@@ -1,6 +1,6 @@
 rm(list=ls())
 source(file = "00_prelim.R")
-
+message("The computations should take approximately 2 minutes.")
 # Generate the point patterns ----
 Nsim <- 100
 beismooth01 <- lapply(bcismooth,
