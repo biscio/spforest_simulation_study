@@ -1,3 +1,4 @@
+rm(list=ls())
 source(file = "00_prelim.R")
 
 # Generate the point patterns ----
