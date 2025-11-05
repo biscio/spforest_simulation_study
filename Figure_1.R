@@ -1,4 +1,5 @@
-rm(list=ls())
+message("The computations should take approximately 5 minutes.")
+
 source('00_prelim.R')
 
 # Getting the date from spatstat.data ----
@@ -30,4 +31,3 @@ plot(1e6*as.im(forest), main = "")
 plot(Window(as.im(forest)), col = c("lightgray", "transparent"), add = T)
 plot(X, add = T, pch = 20)
 # dev.print(pdf, "Figure1_right.pdf", width = 5, height = 5)
-
