@@ -15,7 +15,7 @@ view3d(theta = 10, phi = -50, zoom = 0.7)
 # Figure 2 top right ----
 close3d()
 set.seed(2)
-forestmesh <- spforest(X = beimesh, Ntree = 100, parallel = F)
+forestmesh <- spforest(X = beimesh, Ntree = 100, parallel = F, verbose = TRUE)
 plot(forestmesh, points = T, log = T, colorbar = T)
 view3d(theta = 10, phi = -50, zoom = 0.7)
 # rgl.snapshot("Figure2_topright.png")
