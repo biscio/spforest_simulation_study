@@ -1,9 +1,10 @@
 # Simulation Study
 
 The scripts in this repository reproduce the figures and the table from
-the paper REF.
+the paper REF. They use the companion package
+`https://github.com/biscio/spforest`.
 
-For convenience, we recommand downloading the entire repository and
+For convenience, we recommend downloading the entire repository and
 opening the `.Rproj` file in Rstudio. Utility functions and dependencies
 are coded in the file `00_prelim.R`, which is sourced at the beginning
 of every other script.
@@ -15,7 +16,7 @@ In detail :
   tessellations. No covariates are used in this example.
 
 - `Figure_2.R` shows the intensity estimation of the `bei` dataset on
-  the manifold defined by the geographical topography of its obervation
+  the manifold defined by the geographical topography of its observation
   domain. Again, no covariates are used.
 
 - `Figure_3.R` reports the out-of-bag (OOB) scores and the MISE scores
