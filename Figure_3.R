@@ -8,7 +8,7 @@ if (detectCores() < 25) {
 
 # Computation for all the combinations of hyperparameters ----
 
-nbcores <- 25
+future::plan("multisession", workers = 25)
 
 Nsim <- 100
 Ntree <- 300
@@ -35,7 +35,6 @@ extrarg <- list(
   score = "lcv",
   trueintensity = ztrue,
   Ntree = Ntree,
-  coresPP = nbcores,
   X = X,
   listcovariates = beisoilres,
   saveforest = FALSE
