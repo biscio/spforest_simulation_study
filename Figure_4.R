@@ -43,7 +43,8 @@ Estimforest <- spforest(
   listcovariates = bcismooth,
   mtry = 7,
   minpts = 70,
-  Ntree = 500
+  Ntree = 500,
+  verbose = T
 )
 plot(as.im(Estimforest),
   main = "",
@@ -59,7 +60,8 @@ plot(as.im(Estimforest),
 # pdf(file = "Figure4_bottomleft.pdf",  width = 10,  height = 5,  pointsize = 8)
 lambdatess <- spforest(X[[3]],
   Ntree = 300,
-  dimyx = c(101, 201)
+  dimyx = c(101, 201),
+  verbose = T
 )
 plot(lambdatess,
   main = "",
