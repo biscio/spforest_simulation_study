@@ -26,7 +26,8 @@ forestforvip <- lapply(X, FUN = function(i) {
     listcovariates = bcismooth,
     mtry = 7,
     minpts = 70,
-    Ntree = Ntree
+    Ntree = Ntree,
+    parallel=F
   )
 })
 

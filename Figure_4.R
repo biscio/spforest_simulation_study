@@ -44,7 +44,8 @@ Estimforest <- spforest(
   mtry = 7,
   minpts = 70,
   Ntree = 500,
-  verbose = T
+  verbose = T,
+  parallel=F
 )
 plot(as.im(Estimforest),
   main = "",
@@ -61,7 +62,8 @@ plot(as.im(Estimforest),
 lambdatess <- spforest(X[[3]],
   Ntree = 300,
   dimyx = c(101, 201),
-  verbose = T
+  verbose = T,
+  parallel=F
 )
 plot(lambdatess,
   main = "",

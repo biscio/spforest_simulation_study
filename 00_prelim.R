@@ -5,11 +5,13 @@ if (!requireNamespace("spatstat")) {pak::pkg_install("spatstat")}
 if (!requireNamespace("tidyverse")) {pak::pkg_install("tidyverse")}
 if (!requireNamespace("patchwork")) {pak::pkg_install("patchwork")}
 if (!requireNamespace("pracma")) {pak::pkg_install("pracma")}
+if (!requireNamespace("progressr")) {pak::pkg_install("progressr")}
 if (!requireNamespace("spforest")) {pak::pkg_install("biscio/spforest")}
 
 library(spatstat)
 library(tidyverse)
 library(parallel)
+library(progressr)
 library(spforest)
 
 

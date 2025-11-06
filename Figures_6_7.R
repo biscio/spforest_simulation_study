@@ -12,7 +12,9 @@ forestsmooth <- spforest(
   listcovariates = bcismooth,
   Ntree = Ntree,
   minpts = 10,
-  mtry = 15
+  mtry = 15,
+  verbose=T,
+  parallel=F
 )
 
 co2 <- colourmap(
