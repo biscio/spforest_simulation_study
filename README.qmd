@@ -23,4 +23,3 @@ In detail :
 - `Figure_6_7.R` concerns the application to the 2D `bei` dataset using all available covariates. It shows both the estimated intensity and the VIP scores of all covariates.
 
 - `Table1.R` reproduces the simulation study comparing the random forest approach to  state-of-the-art methods for estimating the intensity of benchmark models. To run this script, the deprecated R package `RandomFields` is required.  The last version can be installed from the CRAN archive repository: <https://cran.r-project.org/src/contrib/Archive/RandomFields>.
-

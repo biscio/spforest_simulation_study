@@ -14,7 +14,6 @@ library(parallel)
 library(progressr)
 library(spforest)
 
-
 #  Computing the errors ----
 
 mise <- function(x,
@@ -45,7 +44,7 @@ ftib <- function(X,
                  p = 0,
                  Ntree = 10,
                  minpts = 50,
-                 threshold = 2*smallest_pixelarea(listcovariates), # Safety net but should never be reached (area(pixel)=25)
+                 threshold = 2 * smallest_pixelarea(listcovariates), # Safety net but should never be reached (area(pixel)=25)
                  cores_trees = 1,
                  tol = Inf,
                  mtry = 1,
@@ -137,9 +136,6 @@ ftib <- function(X,
 }
 
 
-
-
-
 #  To handle RF ----
 
 absim <- function(Z) {
@@ -214,10 +210,11 @@ normalise_score <- function(x, param) {
 
 ## Plot OOB vs MISE
 plotresults <- function(
-    gg,
-    param,
-    xlab = "",
-    title = "") {
+  gg,
+  param,
+  xlab = "",
+  title = ""
+) {
   ggplot(gg, aes(
     x = {{ param }},
     y = sc_value,
@@ -236,13 +233,13 @@ plotresults <- function(
 # Theme for vip barplots
 
 themevip <- theme_bw() +
-    theme(
-        legend.position = "bottom",
-        aspect.ratio = 0.25,
-        axis.text = element_text(size = 10),
-        # axis.text.x = element_text(angle = 315),
-        axis.title = element_text(size = 10),
-        axis.title.x = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank()
-    )
+  theme(
+    legend.position = "bottom",
+    aspect.ratio = 0.25,
+    axis.text = element_text(size = 10),
+    # axis.text.x = element_text(angle = 315),
+    axis.title = element_text(size = 10),
+    axis.title.x = element_blank(),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )

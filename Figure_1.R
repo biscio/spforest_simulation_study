@@ -1,5 +1,5 @@
 rm(list = ls())
-source('00_prelim.R')
+source("00_prelim.R")
 message("The computations should take approximately 5 minutes.")
 
 # Getting the date from spatstat.data ----
@@ -20,14 +20,14 @@ plot(X, add = T, pch = 20, box = T)
 # Figure 1 Middle ----
 set.seed(3)
 tree <- spforest(X, gamma = 40, Ntree = 1, test.connected = TRUE, dimyx = c(512, 512), parallel = F)
-plot(1e6*as.im(tree), main="")
+plot(1e6 * as.im(tree), main = "")
 plot(X, add = T, pch = 20)
 # dev.print(pdf, "Figure1_middle.pdf", width = 5, height = 5)
 
 # Figure 1 Right ----
 set.seed(3)
-forest <- spforest(X, gamma = 40, Ntree = 100, test.connected = TRUE, dimyx = c(512, 512), verbose=T, parallel=F)
-plot(1e6*as.im(forest), main = "")
+forest <- spforest(X, gamma = 40, Ntree = 100, test.connected = TRUE, dimyx = c(512, 512), verbose = T, parallel = F)
+plot(1e6 * as.im(forest), main = "")
 plot(Window(as.im(forest)), col = c("lightgray", "transparent"), add = T)
 plot(X, add = T, pch = 20)
 # dev.print(pdf, "Figure1_right.pdf", width = 5, height = 5)

@@ -1,4 +1,4 @@
-rm(list=ls())
+rm(list = ls())
 source(file = "00_prelim.R")
 message("The computations should take approximately 2 minutes.")
 # Generate the point patterns ----
@@ -45,7 +45,7 @@ Estimforest <- spforest(
   minpts = 70,
   Ntree = 500,
   verbose = T,
-  parallel=F
+  parallel = F
 )
 plot(as.im(Estimforest),
   main = "",
@@ -63,7 +63,7 @@ lambdatess <- spforest(X[[3]],
   Ntree = 300,
   dimyx = c(101, 201),
   verbose = T,
-  parallel=F
+  parallel = F
 )
 plot(lambdatess,
   main = "",

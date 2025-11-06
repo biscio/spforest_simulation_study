@@ -1,4 +1,4 @@
-rm(list=ls())
+rm(list = ls())
 source(file = "00_prelim.R")
 
 # Warning if run on a laptop ----
@@ -8,7 +8,7 @@ if (detectCores() < 25) {
 
 # Computation for all the combinations of hyperparameters ----
 
-nbcores <- 25 
+nbcores <- 25
 
 Nsim <- 100
 Ntree <- 300
