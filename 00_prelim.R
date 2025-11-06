@@ -45,16 +45,14 @@ ftib <- function(X,
                  Ntree = 10,
                  minpts = 50,
                  threshold = 2 * smallest_pixelarea(listcovariates), # Safety net but should never be reached (area(pixel)=25)
-                 cores_trees = 1,
                  tol = Inf,
                  mtry = 1,
                  randmtry = TRUE,
-                 coresPP = 1,
                  error = TRUE,
                  OOB = TRUE,
                  saveforest = FALSE,
                  savelocation = "output/") {
-  listsimu <- mclapply(
+  listsimu <- lapply(
     X = X, FUN = function(i) {
       spforest(
         X = i,
@@ -67,8 +65,7 @@ ftib <- function(X,
         mtry = mtry,
         randmtry = randmtry
       )
-    },
-    mc.cores = coresPP
+    }
   )
   names(listsimu) <- NULL
 
