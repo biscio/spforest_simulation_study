@@ -1,8 +1,10 @@
 # Simulation Study
 
+
 The scripts in this repository reproduce the figures and the table from
-the paper REF. They use the companion package
-`https://github.com/biscio/spforest`.
+the paper REF. They use, the companion package
+`https://github.com/biscio/spforest`, currently under active
+development.
 
 For convenience, we recommend downloading the entire repository and
 opening the `.Rproj` file in Rstudio. Utility functions and dependencies
