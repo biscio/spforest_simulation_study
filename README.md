@@ -22,7 +22,7 @@ In detail :
   domain. Again, no covariates are used.
 
 - `Figure_3.R` reports the out-of-bag (OOB) scores and the MISE scores
-  over a grid of hyperparameters $n_min$ and $mtry$ involved in the
+  over a grid of hyperparameters $n_{min}$ and $mtry$ involved in the
   random forest intensity estimation of a synthetic dataset.
 
 - `Figure_4.R` presents the intensity estimation results for a synthetic

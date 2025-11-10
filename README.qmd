@@ -14,7 +14,7 @@ In detail :
 
 - `Figure_2.R` shows the intensity estimation of the `bei` dataset on the manifold defined by the geographical topography of its observation domain. Again, no covariates are used.
 
-- `Figure_3.R` reports the out-of-bag (OOB) scores and the MISE scores over a grid of hyperparameters $n_min$ and $mtry$ involved in the random forest intensity estimation of a synthetic dataset.
+- `Figure_3.R` reports the out-of-bag (OOB) scores and the MISE scores over a grid of hyperparameters $n_{min}$ and $mtry$ involved in the random forest intensity estimation of a synthetic dataset.
 
 - `Figure_4.R` presents the intensity estimation results for a synthetic dataset using:  the random forest estimator with covariates, when hyperparameters are selected by OOB cross-validation; the estimator without covariates; and a (misspecified) parametric log-linear model.
 
