@@ -1,10 +1,11 @@
 # Simulation Study
 
-
-The scripts in this repository reproduce the figures and the table from
-the paper REF. They use, the companion package
-`https://github.com/biscio/spforest`, currently under active
-development.
+The scripts in this repository reproduce the figures and the table of
+the article *Nonparametric intensity estimation of spatial point
+processes by random forests,*
+[arXiv:2511.09307](https://arxiv.org/abs/2511.09307), 2025. They use the
+companion package [`spforest`](https://github.com/biscio/spforest)
+currently under active development.
 
 For convenience, we recommend downloading the entire repository and
 opening the `.Rproj` file in Rstudio. Utility functions and dependencies
