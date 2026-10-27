@@ -7,6 +7,14 @@ if (!requireNamespace("patchwork")) {pak::pkg_install("patchwork")}
 if (!requireNamespace("pracma")) {pak::pkg_install("pracma")}
 if (!requireNamespace("progressr")) {pak::pkg_install("progressr")}
 if (!requireNamespace("spforest")) {pak::pkg_install("biscio/spforest")}
+if (!requireNamespace("xgboost")) {
+  pak::pkg_install(
+    "url::https://cran.r-project.org/src/contrib/Archive/xgboost/xgboost_1.7.11.1.tar.gz"
+  )}
+if (as.character(packageVersion("xgboost")) != "1.7.11.1") {
+  stop("xgboost was installed, but not with the required version 1.7.11.1.")
+} 
+
 
 library(spatstat)
 library(tidyverse)
